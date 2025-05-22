@@ -1,13 +1,12 @@
-.h1 {
-    color: aquamarine;
-}
+
 header {
     display: flex;
     justify-content: space-evenly;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
     max-height: fit-content;
     align-items: center;
+    color: blue;
 }
 header .first {
     display: flex;
@@ -18,4 +17,24 @@ header .first {
 }
 header .minimal {
     align-self:flex-start ;
+}
+p span {
+    color: black; 
+}
+input {
+    background-color:rgb(241, 241, 241);
+    border: none;
+    width: 400px;
+    height: 30px;
+    
+}
+button {
+    border: none;
+    background-color: white;
+   font-size: 25px;
+   padding-bottom: 0;
+   margin-bottom:0;
+}
+.search {
+    vertical-align: middle;
 }

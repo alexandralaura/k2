@@ -1,8 +1,10 @@
+import React from 'react';
 import styles from './Header.module.css';
 import { FaReddit } from "react-icons/fa";
 import { GiSeaTurtle } from "react-icons/gi";
 import { HiOutlineSearch } from "react-icons/hi";
 //import { useDispatch, useSelector } from 'react-redux';
+
 export function Header() {
     return (
         <>
@@ -19,7 +21,7 @@ export function Header() {
                   type="text"
                   placeholder="Search"
                   aria-label= "Search posts"/>
-                <button type="submit" aria-label="Search"> <HiOutlineSearch /></button>  
+                <button type="submit" aria-label="Search"> <HiOutlineSearch className={styles.search} /></button>  
             </form>
               
 
