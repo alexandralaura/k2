@@ -7,10 +7,10 @@ export function Header() {
     return (
         <>
         <header>
-            <div>
+            <div className={styles.first}>
                 <GiSeaTurtle />
                 <FaReddit />
-                 <p>
+                 <p className={styles.minimal}>
                     Reddit<span>Minimal</span>
                  </p>
             </div> 
