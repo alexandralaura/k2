@@ -7,6 +7,8 @@ import {
     TiArrowDownThick,
     TiMessage,
 } from 'react-icons/ti';
+import { Card } from '../Card/Card';
+import { shortenNumber } from '../utils/shortenNumber';
 
 
 
@@ -89,17 +91,17 @@ export function Post(props)  {
 
             <div className="post-details">
               <span className="author-details">
-                <Avatar name={post.author} />
+                
                 <span className="author-username">{post.author}</span>
               </span>
-              <span>{moment.unix(post.created_utc).fromNow()}</span>
+              <span></span>
               <span className="post-comments-container">
                 <button
                   type="button" 
                   className={`icon-action-button ${
                     post.showingComments && 'showing-comments'
                   }`}
-                  onClick={() => onToggleComments(post.permalink)}
+                  
                   aria-label="Show comments"
                 >
                   <TiMessage className="icon-action" />
@@ -108,7 +110,7 @@ export function Post(props)  {
               </span>
             </div>
 
-            {renderComments()}
+          
           </div>
         </div>
       </Card>
