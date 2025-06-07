@@ -9,20 +9,23 @@ export function Home() {
     {
       id: 0,
       title: 'sea turtle',
-      img: myImage,
-      author: 'alexandra'
+      url: myImage,
+      author: 'alexandra',
+      ups: 456
     },
     {
       id: 1,
       title: 'post title',
-      image: myImage1,
-      author: 'jai'
+      url: myImage1,
+      author: 'jai',
+      ups: 1234
     },
     {
       id: 2,
       title: 'my post title',
-      image: myImage2,
-      author: 'elsie'
+      url: myImage2,
+      author: 'elsie',
+      ups: 123456789
     }
 
    ]

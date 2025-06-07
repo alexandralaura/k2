@@ -9,6 +9,7 @@ import {
 } from 'react-icons/ti';
 import { Card } from '../Card/Card';
 import { shortenNumber } from '../utils/shortenNumber';
+import styles from './Post.module.css';
 
 
 
@@ -56,51 +57,51 @@ export function Post(props)  {
   return (
     <article key={post.id}>
       <Card>
-        <div className="post-wrapper">
-          <div className="post-votes-container">
+        <div className={styles["post-wrapper"]}>
+          <div className={styles["post-votes-container"]}>
             <button
               type="button"
-              className={`icon-action-button up-vote ${
-                voteValue === 1 && 'active'
-              }`}
+              className={`${styles['icon-action-button']} ${styles['up-vote']} ${
+                voteValue === 1 ? styles.active : '' }`}
+              
               onClick={() => onHandleVote(1)}
               aria-label="Up vote"
             >
               {renderUpVote()}
             </button>
-            <p className={`post-votes-value ${getVoteType()}`}>
+            <p className={`${styles['post-votes-value']} ${styles[getVoteType()]}`}>
               {shortenNumber(post.ups, 1)}
             </p>
             <button
               type="button"
-              className={`icon-action-button down-vote ${
-                voteValue === -1 && 'active'
-              }`}
+              className={`${styles['icon-action-button']} ${styles['down-vote']} ${
+                voteValue === -1 ? styles.active : '' }`
+              }
               onClick={() => onHandleVote(-1)}
               aria-label="Down vote"
             >
               {renderDownVote()}
             </button>
           </div>
-          <div className="post-container">
-            <h3 className="post-title">{post.title}</h3>
+          <div className={styles["post-container"]}>
+            <h3 className={styles["post-title"]}>{post.title}</h3>
 
-            <div className="post-image-container">
-              <img src={post.url} alt="" className="post-image" />
+            <div className={styles["post-image-container"]}>
+              <img src={post.url} alt="" className={styles["post-image"]} />
             </div>
 
-            <div className="post-details">
-              <span className="author-details">
+            <div className={styles["post-details"]}>
+              <span className={styles["author-details"]}>
                 
-                <span className="author-username">{post.author}</span>
+                <span className={styles["author-username"]}>{post.author}</span>
               </span>
               <span></span>
-              <span className="post-comments-container">
+              <span className={styles["post-comments-container"]}>
                 <button
                   type="button" 
-                  className={`icon-action-button ${
-                    post.showingComments && 'showing-comments'
-                  }`}
+                  
+                  className={`${styles['icon-action-button']} ${post.showingComments ? styles['showing-comments'] : ''}`}
+
                   
                   aria-label="Show comments"
                 >
