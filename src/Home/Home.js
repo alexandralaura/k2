@@ -8,21 +8,21 @@ export function Home() {
    const posts = [ 
     {
       id: 0,
-      title: 'sea turtle',
+      title: 'Purple Fish',
       url: myImage,
       author: 'alexandra',
       ups: 456
     },
     {
       id: 1,
-      title: 'post title',
+      title: 'Fish With Stripes',
       url: myImage1,
       author: 'jai',
       ups: 1234
     },
     {
       id: 2,
-      title: 'my post title',
+      title: 'Underneath Sting Rays',
       url: myImage2,
       author: 'elsie',
       ups: 123456789

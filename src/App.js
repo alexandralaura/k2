@@ -9,6 +9,9 @@ function App() {
         <main>
         <Home />
         </main>
+        <aside>
+          
+        </aside>
         </>
   );
 }
